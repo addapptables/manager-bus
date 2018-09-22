@@ -17,4 +17,3 @@ export class CommandManager extends Manager<ICommandHandler<any>> {
     protected getMetadata = (handler: ICommandHandler<any>) => getMetadataCommand(handler);
 
 }
-

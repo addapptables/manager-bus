@@ -3,19 +3,22 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.js",
+  "author": "dev@addapptables.com",
   "license": "MIT",
   "scripts": {
     "build": "tsc"
   },
   "dependencies": {
-    "@nestjs/common": "^5.3.2",
-    "@nestjs/core": "^5.3.2",
-    "bluebird": "^3.5.2",
-    "reflect-metadata": "^0.1.12"
+    "@nestjs/common": "5.3.2",
+    "@nestjs/core": "5.3.2",
+    "@addapptables/bus": "https://github.com/addapptables/bus.git",
+    "@addapptables/cqrs": "https://github.com/addapptables/cqrs.git",
+    "bluebird": "3.5.2",
+    "reflect-metadata": "0.1.12"
   },
   "devDependencies": {
-    "@types/node": "^10.9.4",
-    "rxjs": "^6.3.1",
-    "typescript": "^3.0.3"
+    "@types/node": "10.9.4",
+    "rxjs": "6.3.1",
+    "typescript": "3.0.3"
   }
 }
