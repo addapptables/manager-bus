@@ -1,8 +1,10 @@
 import { IHandler, IEventHandlerOptions, ICommandHandlerOptions } from '@addapptables/cqrs';
+import { IBus } from '@addapptables/bus';
 import { ModuleRef } from '@nestjs/core';
 import { Type } from '@nestjs/common';
-import { InvalidModuleRefException } from "./exceptions/invalid-module-ref.exception";
-import { InvalidMetadataException } from "./exceptions/invalid-metatada.exception";
+
+import { InvalidModuleRefException } from './exceptions/invalid-module-ref.exception';
+import { InvalidMetadataException } from './exceptions/invalid-metatada.exception';
 
 export type HandlerMetaType<T extends IHandler<any>> = Type<T>;
 
@@ -12,19 +14,18 @@ export abstract class ManagerAbstract<T extends IHandler<any>> {
 
     protected moduleRef: ModuleRef = null;
 
-    public setModuleRef(moduleRef: ModuleRef): this {
-        this.moduleRef = moduleRef;
-        return this;
-    }
+    protected bus: IBus;
 
-    public setHandlers(handlers: HandlerMetaType<T>[]): this {
-        this.handlers = handlers;
-        return this;
-    }
+    public abstract init(bus: IBus): void;
 
     protected abstract bindHandler(handler: T, metadata: IEventHandlerOptions | ICommandHandlerOptions): void;
 
     protected abstract getMetadata(handler: T | Type<T>): any;
+
+    public setModuleRef(moduleRef: ModuleRef): this {
+        this.moduleRef = moduleRef;
+        return this;
+    }
 
     protected registerHandler(handler: HandlerMetaType<T>): void {
         if (!this.moduleRef) {
