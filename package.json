@@ -9,8 +9,8 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@nestjs/common": "5.3.2",
-    "@nestjs/core": "5.3.2",
+    "@nestjs/common": "^5.3.2",
+    "@nestjs/core": "^5.3.2",
     "@addapptables/bus": "https://github.com/addapptables/bus.git",
     "@addapptables/cqrs": "https://github.com/addapptables/cqrs.git",
     "bluebird": "3.5.2",
