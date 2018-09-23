@@ -2,33 +2,6 @@
 # yarn lockfile v1
 
 
-"@addapptables/bus@https://github.com/addapptables/bus.git":
-  version "1.0.0"
-  resolved "https://github.com/addapptables/bus.git#f748695f4e08b30b91f211e940ca61d5606e57a7"
-  dependencies:
-    "@nestjs/common" "5.1.0"
-    "@nestjs/core" "5.1.0"
-    "@nestjs/microservices" "5.1.0"
-    amqplib "0.5.2"
-    bluebird "3.5.1"
-    ramda "0.25.0"
-    rxjs "6.2.2"
-
-"@addapptables/cqrs@https://github.com/addapptables/cqrs.git":
-  version "1.0.0"
-  resolved "https://github.com/addapptables/cqrs.git#49182492a30db8b51e2ecf960610e4fc5534e11b"
-  dependencies:
-    reflect-metadata "0.1.12"
-
-"@nestjs/common@5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-5.1.0.tgz#e6ad84c74f244a9e9b94ace8678485a2f8e10cef"
-  dependencies:
-    axios "0.17.1"
-    cli-color "1.2.0"
-    deprecate "1.0.0"
-    multer "1.3.0"
-
 "@nestjs/common@^5.3.2":
   version "5.3.7"
   resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-5.3.7.tgz#862db9a4c34ad2adc467815fca72d27353953b6d"
@@ -38,17 +11,6 @@
     deprecate "1.0.0"
     multer "1.3.0"
     uuid "3.3.2"
-
-"@nestjs/core@5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-5.1.0.tgz#6884c0f2f1a9ec327752856d48f1a38a1de7ae32"
-  dependencies:
-    body-parser "1.18.2"
-    cors "2.8.4"
-    express "4.16.3"
-    iterare "0.0.8"
-    object-hash "1.3.0"
-    optional "0.1.4"
 
 "@nestjs/core@^5.3.2":
   version "5.3.7"
@@ -63,14 +25,6 @@
     optional "0.1.4"
     path-to-regexp "2.2.1"
     uuid "3.3.2"
-
-"@nestjs/microservices@5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@nestjs/microservices/-/microservices-5.1.0.tgz#3546cb01783a8b51ccff793870b1f8df96d09a0d"
-  dependencies:
-    iterare "0.0.8"
-    json-socket "^0.2.1"
-    optional "0.1.4"
 
 "@nuxtjs/opencollective@0.1.0":
   version "0.1.0"
@@ -91,16 +45,6 @@ accepts@~1.3.5:
   dependencies:
     mime-types "~2.1.18"
     negotiator "0.6.1"
-
-amqplib@0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/amqplib/-/amqplib-0.5.2.tgz#d2d7313c7ffaa4d10bcf1e6252de4591b6cc7b63"
-  dependencies:
-    bitsyntax "~0.0.4"
-    bluebird "^3.4.6"
-    buffer-more-ints "0.0.2"
-    readable-stream "1.x >=1.1.9"
-    safe-buffer "^5.0.1"
 
 ansi-regex@^2.1.1:
   version "2.1.1"
@@ -127,17 +71,7 @@ axios@0.17.1:
     follow-redirects "^1.2.5"
     is-buffer "^1.1.5"
 
-bitsyntax@~0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/bitsyntax/-/bitsyntax-0.0.4.tgz#eb10cc6f82b8c490e3e85698f07e83d46e0cba82"
-  dependencies:
-    buffer-more-ints "0.0.2"
-
-bluebird@3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
-
-bluebird@3.5.2, bluebird@^3.4.6:
+bluebird@3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.2.tgz#1be0908e054a751754549c270489c1505d4ab15a"
 
@@ -174,10 +108,6 @@ body-parser@1.18.3:
 buffer-from@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
-
-buffer-more-ints@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/buffer-more-ints/-/buffer-more-ints-0.0.2.tgz#26b3885d10fa13db7fc01aae3aab870199e0124c"
 
 busboy@^0.2.11:
   version "0.2.14"
@@ -505,10 +435,6 @@ iterare@0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/iterare/-/iterare-0.0.8.tgz#a969a80a1fbff6b78f28776594d7bc2bdfab6aad"
 
-json-socket@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/json-socket/-/json-socket-0.2.1.tgz#26e7ed8cc131f17aa0136c32068f473b5dbefb22"
-
 lodash@^4.17.5:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
@@ -650,10 +576,6 @@ qs@6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
 
-ramda@0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
-
 range-parser@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
@@ -676,7 +598,7 @@ raw-body@2.3.3:
     iconv-lite "0.4.23"
     unpipe "1.0.0"
 
-readable-stream@1.1.x, "readable-stream@1.x >=1.1.9":
+readable-stream@1.1.x:
   version "1.1.14"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
   dependencies:
@@ -701,12 +623,6 @@ reflect-metadata@0.1.12:
   version "0.1.12"
   resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.12.tgz#311bf0c6b63cd782f228a81abe146a2bfa9c56f2"
 
-rxjs@6.2.2:
-  version "6.2.2"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.2.2.tgz#eb75fa3c186ff5289907d06483a77884586e1cf9"
-  dependencies:
-    tslib "^1.9.0"
-
 rxjs@6.3.1:
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.3.1.tgz#878a1a8c64b8a5da11dcf74b5033fe944cdafb84"
@@ -717,7 +633,7 @@ safe-buffer@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
-safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
+safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
 
