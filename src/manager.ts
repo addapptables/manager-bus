@@ -1,7 +1,6 @@
 import { IHandler, IEventHandlerOptions, ICommandHandlerOptions } from '@addapptables/cqrs';
 import { ManagerAbstract } from './manager-abstract';
 
-
 export abstract class Manager<T extends IHandler<any>> extends ManagerAbstract<T> {
 
     protected async bindHandler(handler: T, metadata: IEventHandlerOptions | ICommandHandlerOptions): Promise<void> {
@@ -15,7 +14,7 @@ export abstract class Manager<T extends IHandler<any>> extends ManagerAbstract<T
             handle(content);
             ack();
         } catch (error) {
-            nack();
+            ack();
         }
     };
 

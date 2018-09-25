@@ -19,7 +19,7 @@ class Manager extends manager_abstract_1.ManagerAbstract {
                 ack();
             }
             catch (error) {
-                nack();
+                ack();
             }
         };
     }
