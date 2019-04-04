@@ -41,7 +41,7 @@ let ExplorerService = class ExplorerService {
     }
     extractMetadata(instance, metadataKey) {
         if (!instance.constructor) {
-            return;
+            return undefined;
         }
         const metadata = Reflect.getMetadata(metadataKey, instance.constructor);
         return metadata ? instance.constructor : undefined;

@@ -6,7 +6,8 @@
   "author": "dev@addapptables.com",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json -c tslint.json"
   },
   "dependencies": {
     "bluebird": "3.5.2",
@@ -20,12 +21,13 @@
     "rxjs": ">=6.0.0 <7.0.0"
   },
   "devDependencies": {
-    "@types/node": "10.9.4",
-    "install-peers": "^1.0.3",
     "@addapptables/bus": ">=2.0.0 <3.0.0",
     "@addapptables/cqrs": ">=2.0.0 <3.0.0",
     "@nestjs/common": ">=6.0.0 <7.0.0",
     "@nestjs/core": ">=6.0.0 <7.0.0",
+    "@types/node": "10.9.4",
+    "backend-tslint-rules": "^1.14.0",
+    "install-peers": "^1.0.3",
     "rxjs": ">=6.0.0 <7.0.0",
     "typescript": "3.0.3"
   },

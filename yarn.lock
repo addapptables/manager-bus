@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@addapptables/bus@>=1.0.0 <2.0.0":
+"@addapptables/bus@>=2.0.0 <3.0.0":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@addapptables/bus/-/bus-1.1.3.tgz#835eaf43ffb1b18f1590a42e040fdeadc7dd9618"
   dependencies:
     amqplib "0.5.2"
     ramda "0.25.0"
 
-"@addapptables/cqrs@>=1.0.0 <2.0.0":
+"@addapptables/cqrs@>=2.0.0 <3.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@addapptables/cqrs/-/cqrs-1.0.0.tgz#d6a977e85e67a50570cba4dca43814ccb54520d9"
   dependencies:
@@ -72,6 +72,10 @@ axios@0.18.0:
   dependencies:
     follow-redirects "^1.3.0"
     is-buffer "^1.1.5"
+
+backend-tslint-rules@^1.14.0:
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/backend-tslint-rules/-/backend-tslint-rules-1.14.0.tgz#072b9dbc59fcf3487421b298e333b74c47392556"
 
 bitsyntax@~0.0.4:
   version "0.0.4"
