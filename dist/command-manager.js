@@ -34,7 +34,7 @@ let CommandManager = class CommandManager extends manager_1.Manager {
         return __awaiter(this, void 0, void 0, function* () {
             this.bus = bus;
             this.handlers = this.explorerService.getCommands();
-            yield bluebird_1.each(this.handlers, handler => this.registerHandler(handler));
+            yield bluebird_1.each(this.handlers, (handler) => __awaiter(this, void 0, void 0, function* () { return yield this.registerHandler(handler); }));
         });
     }
 };

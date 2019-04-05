@@ -20,7 +20,7 @@ export class CommandManager extends Manager<ICommandHandler<any>> {
     async init(bus: IBus): Promise<void> {
         this.bus = bus;
         this.handlers = this.explorerService.getCommands();
-        await each(this.handlers, handler => this.registerHandler(handler));
+        await each(this.handlers, async handler => await this.registerHandler(handler));
     }
 
     protected getMetadata = (handler: ICommandHandler<any>) => getMetadataCommand(handler);

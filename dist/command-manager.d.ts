@@ -8,5 +8,5 @@ export declare class CommandManager extends Manager<ICommandHandler<any>> {
     private readonly explorerService;
     constructor(moduleRef: ModuleRef, explorerService: ExplorerService);
     init(bus: IBus): Promise<void>;
-    protected getMetadata: (handler: ICommandHandler<any>) => import("@addapptables/cqrs/dist/interfaces/commands/command-handler-options.interface").ICommandHandlerOptions;
+    protected getMetadata: (handler: ICommandHandler<any>) => import("@addapptables/cqrs").ICommandHandlerOptions;
 }

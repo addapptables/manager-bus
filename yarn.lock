@@ -2,20 +2,20 @@
 # yarn lockfile v1
 
 
-"@addapptables/bus@>=2.0.0 <3.0.0":
+"@addapptables/bus@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@addapptables/bus/-/bus-1.1.3.tgz#835eaf43ffb1b18f1590a42e040fdeadc7dd9618"
   dependencies:
     amqplib "0.5.2"
     ramda "0.25.0"
 
-"@addapptables/cqrs@>=2.0.0 <3.0.0":
+"@addapptables/cqrs@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@addapptables/cqrs/-/cqrs-1.0.0.tgz#d6a977e85e67a50570cba4dca43814ccb54520d9"
   dependencies:
     reflect-metadata "0.1.12"
 
-"@nestjs/common@>=6.0.0 <7.0.0":
+"@nestjs/common@^6.0.5":
   version "6.0.5"
   resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-6.0.5.tgz#2e33ced50e629a5c32df3b9a09efde61d4b5a2df"
   dependencies:
@@ -23,7 +23,7 @@
     cli-color "1.4.0"
     uuid "3.3.2"
 
-"@nestjs/core@>=6.0.0 <7.0.0":
+"@nestjs/core@^6.0.5":
   version "6.0.5"
   resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-6.0.5.tgz#f17b91c7c0fcee178791040279be06ffc3785faf"
   dependencies:
@@ -299,7 +299,7 @@ reflect-metadata@0.1.12:
   version "0.1.12"
   resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.12.tgz#311bf0c6b63cd782f228a81abe146a2bfa9c56f2"
 
-"rxjs@>=6.0.0 <7.0.0":
+rxjs@^6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.4.0.tgz#f3bb0fe7bda7fb69deac0c16f17b50b0b8790504"
   dependencies:
@@ -330,9 +330,9 @@ tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 
-typescript@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.0.3.tgz#4853b3e275ecdaa27f78fda46dc273a7eb7fc1c8"
+typescript@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.1.tgz#b6691be11a881ffa9a05765a205cb7383f3b63c6"
 
 uuid@3.3.2:
   version "3.3.2"

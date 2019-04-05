@@ -8,5 +8,5 @@ export declare class EventManager extends Manager<IEventHandler<any>> {
     private readonly explorerService;
     constructor(moduleRef: ModuleRef, explorerService: ExplorerService);
     init(bus: IBus): Promise<void>;
-    protected getMetadata: (handler: IEventHandler<any>) => import("@addapptables/cqrs/dist/interfaces/events/event-handler-options.interface").IEventHandlerOptions;
+    protected getMetadata: (handler: IEventHandler<any>) => import("@addapptables/cqrs").IEventHandlerOptions;
 }
