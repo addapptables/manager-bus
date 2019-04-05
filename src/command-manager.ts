@@ -1,16 +1,25 @@
 import { Injectable } from '@nestjs/common';
-import { getCommandHandlers, getMetadataCommand, ICommandHandler } from '@addapptables/cqrs';
+import { getMetadataCommand, ICommandHandler } from '@addapptables/cqrs';
 import { IBus } from '@addapptables/bus';
 import { each } from 'bluebird';
 
 import { Manager } from './manager';
+import { ExplorerService } from './services/explore.service';
+import { ModuleRef } from '@nestjs/core';
 
 @Injectable()
 export class CommandManager extends Manager<ICommandHandler<any>> {
 
-    public async init(bus: IBus): Promise<void> {
+    constructor(
+        protected readonly moduleRef: ModuleRef,
+        private readonly explorerService: ExplorerService
+    ) {
+        super(moduleRef);
+    }
+
+    async init(bus: IBus): Promise<void> {
         this.bus = bus;
-        this.handlers = getCommandHandlers();
+        this.handlers = this.explorerService.getCommands();
         await each(this.handlers, async handler => await this.registerHandler(handler));
     }
 

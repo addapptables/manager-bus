@@ -12,9 +12,9 @@ export abstract class ManagerAbstract<T extends IHandler<any>> {
 
     protected handlers: HandlerMetaType<T>[];
 
-    protected moduleRef: ModuleRef = null;
-
     protected bus: IBus;
+
+    constructor(protected readonly moduleRef: ModuleRef) { }
 
     public abstract init(bus: IBus): void;
 
@@ -22,16 +22,11 @@ export abstract class ManagerAbstract<T extends IHandler<any>> {
 
     protected abstract getMetadata(handler: T | Type<T>): any;
 
-    public setModuleRef(moduleRef: ModuleRef): this {
-        this.moduleRef = moduleRef;
-        return this;
-    }
-
     protected registerHandler(handler: HandlerMetaType<T>): void {
         if (!this.moduleRef) {
             throw new InvalidModuleRefException();
         }
-        const instance: T = this.moduleRef.get(handler);
+        const instance: T = this.moduleRef.get(handler, { strict: false });
         if (!instance) return;
 
         const metadata = this.getMetadata(handler);

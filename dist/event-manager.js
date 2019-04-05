@@ -5,6 +5,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -18,20 +21,26 @@ const common_1 = require("@nestjs/common");
 const cqrs_1 = require("@addapptables/cqrs");
 const bluebird_1 = require("bluebird");
 const manager_1 = require("./manager");
+const explore_service_1 = require("./services/explore.service");
+const core_1 = require("@nestjs/core");
 let EventManager = class EventManager extends manager_1.Manager {
-    constructor() {
-        super(...arguments);
+    constructor(moduleRef, explorerService) {
+        super(moduleRef);
+        this.moduleRef = moduleRef;
+        this.explorerService = explorerService;
         this.getMetadata = (handler) => cqrs_1.getMetadataEvent(handler);
     }
     init(bus) {
         return __awaiter(this, void 0, void 0, function* () {
             this.bus = bus;
-            this.handlers = cqrs_1.getEventHandlers();
+            this.handlers = this.explorerService.getEventHandlers();
             yield bluebird_1.each(this.handlers, (handler) => __awaiter(this, void 0, void 0, function* () { return yield this.registerHandler(handler); }));
         });
     }
 };
 EventManager = __decorate([
-    common_1.Injectable()
+    common_1.Injectable(),
+    __metadata("design:paramtypes", [core_1.ModuleRef,
+        explore_service_1.ExplorerService])
 ], EventManager);
 exports.EventManager = EventManager;
